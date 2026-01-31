@@ -88,5 +88,6 @@ Then you can open:
 ## Repo structure
 
 This project is intentionally minimal:
-.
-└── NeuroTyper_v5.html
+    .
+    └── NeuroTyper_v5.html
+
