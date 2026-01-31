@@ -1,6 +1,6 @@
 # NeuroTyper (v5)
 
-**NeuroTyper** is a single-file, browser-based typing “race” app designed for studying neuroscience lecture material while building typing speed and accuracy. Paste in passages from your NEU lectures, then race against neurotransmitter-themed bots that scale to your skill level.
+**NeuroTyper** is a single-file, browser-based typing “race” app designed for studying neuroscience lecture material while building typing speed and accuracy. Paste in passages from your NEU lectures, then race against neurotransmitter-themed bots that scale to your skill level. Fun and satisfying!
 
 > **File:** `NeuroTyper_v5.html`  
 > **Stack:** React (via CDN), Tailwind CSS (via CDN), `localStorage` (no backend)
