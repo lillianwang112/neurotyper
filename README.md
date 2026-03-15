@@ -1,106 +1,117 @@
-# NeuroTyper
+# PokemonType — Gotta Type 'Em All!
 
-**NeuroTyper** is a feature-rich, browser-based typing race app designed for studying neuroscience lecture material while building typing speed and accuracy. Paste in passages from your lectures, then race against neurotransmitter-themed bots that adapt to your skill level.
+A NitroType-inspired Pokemon racing game where you study **any subject** by typing passages at speed. Race your Pokemon against wild opponents, earn XP, level up, unlock new Pokemon, and collect achievements.
 
-> **Live:** Deploy to GitHub Pages and access at `https://<username>.github.io/neurotyper/`
-> **Stack:** React 18, Tailwind CSS, Web Audio API, localStorage — all via CDN, zero build step
+> **Live:** Deploy to GitHub Pages → `https://<username>.github.io/neurotyper/`
+> **Stack:** React 18, Tailwind CSS, Web Audio API, localStorage — zero build step
 
 ---
 
 ## Features
 
-### Lecture Library
-- Create, rename, and delete **lectures** (e.g., "Lecture 13 — Basal Ganglia")
-- Add multiple **passages** per lecture by pasting text
-- Inline editing and deletion of individual passages
+### Pokemon Racing
+- **Animated race track** with your Pokemon racing against 4 wild opponents (Rattata, Pidgey, Abra, Haunter)
+- **Running animations** and **speed line particles** during races
+- **Screen shake** on typos for visceral feedback
+- **3-2-1 countdown** with sound effects before each race
+- **Placement system** — finish 1st through 5th with medal awards
 
-### Typing Race Mode
-- **Single Lecture** — race from one lecture's passages
-- **Mixed Review** — combine multiple lectures for comprehensive review
-- **3-2-1 Countdown** with sound effects before each race
-- **Combo System** — track consecutive correct keystrokes with visual feedback
-- Press **Esc** to instantly restart any race
+### Pokemon Garage (10 Pokemon)
+Choose your racer — each Pokemon has unique speed bonuses:
+| Pokemon | Type | Speed | Unlock |
+|---------|------|-------|--------|
+| Pikachu ⚡ | Electric | Base | Start |
+| Charmander 🔥 | Fire | Base | Start |
+| Squirtle 💧 | Water | Base | Start |
+| Bulbasaur 🌿 | Grass | Base | Start |
+| Eevee 🦊 | Normal | +5% | 3 races |
+| Jigglypuff 🎤 | Fairy | Base | 5 races |
+| Gengar 👻 | Ghost | +10% | 8 races |
+| Mewtwo 🔮 | Psychic | +15% | 12 races |
+| Rayquaza 🐉 | Dragon | +20% | 18 races |
+| Arceus ✨ | Cosmic | +25% | 25 races |
 
-### Three Difficulty Levels
-- **Easy** — shorter passages, slower bots
-- **Medium** — standard length, balanced bots
-- **Hard** — full-length passages, faster bots
+### Nitro Boost System
+- Build **Nitro charge** by typing correctly (2% per correct character)
+- Press **TAB** to activate Nitro Boost when charge reaches 50%+
+- **+15% speed boost** for 3 seconds with visual effects and sound
 
-### Live Race Feedback
-- Real-time **WPM**, **accuracy**, and **progress** stats
-- Character-by-character highlighting (green = correct, red = incorrect)
-- Auto-scrolling passage display with cursor indicator
-- Animated race track showing you vs. 4 neurotransmitter-themed bots
+### XP & Leveling
+- Earn XP based on **WPM x Accuracy x Difficulty multiplier**
+- **Combo bonus** — 20%+ extra XP for 20+ character combos
+- Progressive leveling with exponential XP curve
+- XP bar displayed in header at all times
 
-### Adaptive Bots
-Race against bots named after neurotransmitters:
-- Glutamate, Dopamine, GABA, Acetylcholine
-- Bot speeds scale based on your recent performance average
-- Each bot has slight randomness for varied competition
+### Combo System
+- Track consecutive correct keystrokes
+- Visual combo counter appears at 3+ streak
+- Sound effects at every 10x milestone
+- Contributes to achievements and bonus XP
 
-### Achievement System (12 Achievements)
-Unlock badges for milestones like:
-- First Steps, Speed Demon (60+ WPM), Perfectionist (100% accuracy)
-- Lightning Fingers (80+ WPM), Transcendent (100+ WPM)
-- Combo King (20+ streak), Unstoppable (7-day streak), and more
-- Toast notifications with sound effects when unlocked
+### 16 Achievements
+- Speed milestones: Quick Attack (50+), Thunderbolt (70+), Thunder (90+), Hyper Beam (100+)
+- Dedication: Trainer (10 races), Ace Trainer (25), Pokemon Master (50)
+- Streaks: On Fire (3 days), Unstoppable (7 days)
+- Combos: Combo Master (30+), Ultra Combo (50+)
+- Special: Perfect Form (100% accuracy), Nitro User, Level milestones
+
+### Study Any Subject
+- **Universal topic system** — works for any class (biology, history, CS, literature, anything)
+- Create unlimited topics with multiple passages each
+- Single topic or mixed review mode
+- Easy/Medium/Hard difficulty levels
 
 ### Statistics Dashboard
-- **WPM trend chart** — visual bar chart of your last 30 races
-- **Full race history table** — date, WPM, accuracy, mode
-- Aggregate stats: total races, best WPM, avg accuracy, perfect races, streak, best combo, total time
+- WPM trend chart (last 40 races) with color-coded bars
+- Full race log with Pokemon used, WPM, accuracy, XP earned
+- Aggregate stats: total races, best WPM, avg accuracy, streak, best combo
 
-### Practice Streak Tracking
-- Tracks consecutive days of practice
-- Streak-based achievements to keep you motivated
+### Sound Design (Web Audio API)
+- Keystroke clicks, error buzzes, countdown ticks
+- Nitro boost activation sound
+- Victory fanfare, level-up jingle, achievement unlock
+- Toggle on/off from header
 
-### Sound Effects
-- Keystroke clicks, error buzzes, countdown beeps
-- Victory fanfare on race completion
-- Achievement unlock jingle
-- Toggle on/off from the header or settings
-
-### Confetti Celebration
-- Particle confetti animation on every race completion
+### Visual Effects
+- 80-particle confetti on race completion
+- Speed line particles during typing
+- Nitro glow effects
+- Screen shake on errors
+- Smooth animations throughout
 
 ### Data Management
-- **Export** all data (lectures, races, settings, achievements) as JSON
-- **Import** backup files to restore your progress
-- **Clear all data** option in settings
+- Export/Import all data as JSON backup
+- Clear all data option
 - Everything stored locally — zero server, total privacy
-
-### Modern UI
-- Glassmorphism design with gradient accents
-- Dark and light theme support
-- Smooth animations and transitions throughout
-- Responsive layout — works on desktop, tablet, and mobile
-- Custom fonts (Inter + JetBrains Mono)
 
 ---
 
-## How to Deploy on GitHub Pages
+## Deploy to GitHub Pages
 
 1. Push this repo to GitHub
 2. Go to **Settings → Pages**
-3. Under "Build and deployment":
-   - Source: **Deploy from a branch**
-   - Branch: `main`
-   - Folder: `/ (root)`
-4. Save and wait ~1 minute
+3. Source: **Deploy from a branch** → `main` → `/ (root)`
+4. Save — live in ~1 minute at `https://<username>.github.io/neurotyper/`
 
-Your app will be live at:
-`https://<your-username>.github.io/neurotyper/`
-
-The `index.html` file is automatically served — no build step needed.
-
----
+No build step needed — `index.html` is served automatically.
 
 ## Run Locally
 
-1. Clone or download this repo
-2. Open `index.html` in any browser
+```
+git clone <repo-url>
+open index.html
+```
 
-> Requires internet on first load to fetch React and Tailwind from CDNs.
+---
+
+## Controls
+
+| Key | Action |
+|-----|--------|
+| Type | Race! |
+| TAB | Activate Nitro Boost (when charged 50%+) |
+| ESC | Restart current race |
+| Enter | Race again (on results screen) |
 
 ---
 
@@ -108,18 +119,7 @@ The `index.html` file is automatically served — no build step needed.
 
 ```
 .
-├── index.html            # Complete app (single file, GitHub Pages ready)
-├── NeuroTyper_v5.html    # Legacy version (v5)
+├── index.html            # Complete app (GitHub Pages ready)
+├── NeuroTyper_v5.html    # Legacy version
 └── README.md
 ```
-
----
-
-## Data & Privacy
-
-All data is stored **locally in your browser** via `localStorage`:
-- Lectures and passages
-- Race history and statistics
-- Settings and achievements
-
-There is **no server** — nothing is uploaded anywhere. To reset, clear site data in your browser or use the "Clear All Data" button in Settings.
