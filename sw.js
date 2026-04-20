@@ -1,10 +1,10 @@
-const CACHE_NAME = 'neurotyper-v1';
+const CACHE_NAME = 'neurotyper-v2';
 const ASSETS = [
-  '/',
-  '/index.html',
-  '/manifest.json',
-  '/icons/icon-192x192.png',
-  '/icons/icon-512x512.png'
+  '/neurotyper/',
+  '/neurotyper/index.html',
+  '/neurotyper/manifest.json',
+  '/neurotyper/icons/icon-192x192.png',
+  '/neurotyper/icons/icon-512x512.png'
 ];
 
 self.addEventListener('install', event => {
